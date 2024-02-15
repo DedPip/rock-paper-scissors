@@ -1,6 +1,7 @@
 // first we get a random number from any of the following: 1,2 & 3
 // then we assign each to rock, paper or scissor
 // and that's how we get one of the 3 values(rock, paper...) randomly
+
 function getComputerChoice() {
   randNum = Math.floor(Math.random() * 3) + 1;
   if (randNum === 1) {return "rock"}
@@ -10,6 +11,7 @@ function getComputerChoice() {
 }
 
 // global variables added for each outcome because I wanted to use them in functions other than round like playRound
+
 const youWin = "You win!";
 const youLose = "You lose!";
 const tie = "It's a tie!";
@@ -17,6 +19,7 @@ const tie = "It's a tie!";
 // we first recieve the two parameters
 // we need to make playerSelection case-insensitive hence the use of playerSelectionLowerCase variable. 
 // finally we write the return value for every possible outcome
+
 function round(playerSelection, computerSelection) {
 
   let playerSelectionLowerCase = playerSelection.toLowerCase();
@@ -39,6 +42,7 @@ function round(playerSelection, computerSelection) {
 }
 
 // this function plays a single round and returns the result as a string containing one of the following : loss, draw or win
+
 function playRound() {
   let playerSelection = prompt("Play with computer: Rock, Paper or Scissor? (5 rounds)");
   
@@ -55,6 +59,7 @@ function playRound() {
 // 5 rounds are played and each are stored in a variable
 // after all of them are played game results are shown
 // game scores are given and match result is shown
+
 function playGame() {
   let wins = 0
   let loses = 0
@@ -63,6 +68,7 @@ function playGame() {
   let round3 = playRound();
   let round4 = playRound();
   let round5 = playRound();
+  
   alert("Game results: " + " " + round1 + ", " +round2 + ", " + round3 + ", " + round4 + " and " + round5)
 
   if (round1 === "win") {wins = wins + 1;}
