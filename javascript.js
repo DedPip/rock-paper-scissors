@@ -6,29 +6,32 @@ function getComputerChoice() {
   if (randNum === 1) {return "rock"}
   else if (randNum === 2) {return "paper"}
   else if (randNum === 3) {return "scissor"}
-  else {return undefined}
+  else {return "getComputerChoice is not working properly"}
 }
 
 // we first recieve the two parameters
 // we need to make playerSelection case-insensitive hence the use of playerSelectionLowerCase variable. 
 // finally we write the return value for every possible outcome
+const youWin = "You win!"
+const youLose = "You lose!"
+const tie = "It's a tie!"
 function playRound(playerSelection, computerSelection) {
   
   const playerSelectionLowerCase = playerSelection.toLowerCase()
 
-  if (playerSelectionLowerCase === computerSelection) {return "It's a tie"}
+  if (playerSelectionLowerCase === computerSelection) {return tie }
 
-  else if (playerSelectionLowerCase === "rock" && computerSelection === "paper" ) {return "You lose! Paper beats Rock"}
+  else if (playerSelectionLowerCase === "rock" && computerSelection === "paper" ) {return youLose + " Paper beats Rock"}
   
-  else if (playerSelectionLowerCase === "rock" && computerSelection === "scissor") {return "You win! Rock beats Scissor"}
+  else if (playerSelectionLowerCase === "rock" && computerSelection === "scissor") {return youWin + " Rock beats Scissor"}
   
-  else if (playerSelectionLowerCase === "paper" && computerSelection === "rock") {return "You win! Paper beats Rock"}
+  else if (playerSelectionLowerCase === "paper" && computerSelection === "rock") {return youWin + " Paper beats Rock"}
 
-  else if (playerSelectionLowerCase === "paper" && computerSelection === "scissor") {return "You lose! Scissor beats Paper"}
+  else if (playerSelectionLowerCase === "paper" && computerSelection === "scissor") {return youLose + " Scissor beats Paper"}
 
-  else if (playerSelectionLowerCase === "scissor" && computerSelection === "rock") {return "You lose! Rock beats Scissor"}
+  else if (playerSelectionLowerCase === "scissor" && computerSelection === "rock") {return youLose + " Rock beats Scissor"}
 
-  else if (playerSelectionLowerCase === "scissor" && computerSelection === "paper") {return "You win! Scissor beats Paper"} 
+  else if (playerSelectionLowerCase === "scissor" && computerSelection === "paper") {return youWin + " Scissor beats Paper"} 
   
-  else {return "playRound is not working correctly"}
+  else {return "playRound is not working properly"}
 }
