@@ -10,7 +10,8 @@ function getComputerChoice() {
   else {return "getComputerChoice is not working properly"}
 }
 
-// global variables added for each outcome because I wanted to use them in functions other than round like playRound
+// global variables added for each outcome because I wanted to use them in
+// functions other than round like playRound
 
 const youWin = "You win!";
 const youLose = "You lose!";
@@ -79,7 +80,7 @@ function playGame() {
   let round4 = playRound();
   let round5 = playRound();
   
-  alert("Game results: " + " " + round1 + ", " +round2 + 
+  alert("Game results: " + " " + round1 + ", " + round2 + 
         ", " + round3 + ", " + round4 + " and " + round5)
 
   if (round1 === "win") {wins = wins + 1;}
