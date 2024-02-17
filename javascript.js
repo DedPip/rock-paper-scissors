@@ -17,7 +17,8 @@ const youLose = "You lose!";
 const tie = "It's a tie!";
 
 // we first recieve the two parameters
-// we need to make playerSelection case-insensitive hence the use of playerSelectionLowerCase variable. 
+// we need to make playerSelection case-insensitive
+// hence the use of playerSelectionLowerCase variable. 
 // finally we write the return value for every possible outcome
 
 function round(playerSelection, computerSelection) {
@@ -26,25 +27,33 @@ function round(playerSelection, computerSelection) {
 
   if (playerSelectionLowerCase === computerSelection) {return tie }
 
-  else if (playerSelectionLowerCase === "rock" && computerSelection === "paper" ) {return youLose + " Paper beats Rock"}
+  else if (playerSelectionLowerCase === "rock" && computerSelection === "paper")
+  {return youLose + " Paper beats Rock"}
   
-  else if (playerSelectionLowerCase === "rock" && computerSelection === "scissor") {return youWin + " Rock beats Scissor"}
+  else if (playerSelectionLowerCase === "rock" && computerSelection === "scissor")
+  {return youWin + " Rock beats Scissor"}
   
-  else if (playerSelectionLowerCase === "paper" && computerSelection === "rock") {return youWin + " Paper beats Rock"}
+  else if (playerSelectionLowerCase === "paper" && computerSelection === "rock")
+  {return youWin + " Paper beats Rock"}
 
-  else if (playerSelectionLowerCase === "paper" && computerSelection === "scissor") {return youLose + " Scissor beats Paper"}
+  else if (playerSelectionLowerCase === "paper" && computerSelection === "scissor")
+  {return youLose + " Scissor beats Paper"}
 
-  else if (playerSelectionLowerCase === "scissor" && computerSelection === "rock") {return youLose + " Rock beats Scissor"}
+  else if (playerSelectionLowerCase === "scissor" && computerSelection === "rock")
+  {return youLose + " Rock beats Scissor"}
 
-  else if (playerSelectionLowerCase === "scissor" && computerSelection === "paper") {return youWin + " Scissor beats Paper"} 
+  else if (playerSelectionLowerCase === "scissor" && computerSelection === "paper")
+  {return youWin + " Scissor beats Paper"} 
   
   else {return "round is not working properly"}
 }
 
-// this function plays a single round and returns the result as a string containing one of the following : loss, draw or win
+// this function plays a single round and returns the result as a string
+//containing one of the following : loss, draw or win
 
 function playRound() {
-  let playerSelection = prompt("Play with computer: Rock, Paper or Scissor? (5 rounds)");
+  let playerSelection = 
+  prompt("Play with computer: Rock, Paper or Scissor? (5 rounds)");
   
   let computerSelection = getComputerChoice();
 
@@ -61,8 +70,9 @@ function playRound() {
 // game scores are given and match result is shown
 
 function playGame() {
-  let wins = 0
-  let loses = 0
+  
+  let wins = 0;
+  let loses = 0;
   let round1 = playRound();
   let round2 = playRound();
   let round3 = playRound();
@@ -97,4 +107,4 @@ function playGame() {
   
 }
 
-alert(playGame())
+alert(playGame());
