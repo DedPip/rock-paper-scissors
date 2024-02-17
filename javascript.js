@@ -79,7 +79,8 @@ function playGame() {
   let round4 = playRound();
   let round5 = playRound();
   
-  alert("Game results: " + " " + round1 + ", " +round2 + ", " + round3 + ", " + round4 + " and " + round5)
+  alert("Game results: " + " " + round1 + ", " +round2 + 
+        ", " + round3 + ", " + round4 + " and " + round5)
 
   if (round1 === "win") {wins = wins + 1;}
   else if (round1 === "loss") {loses = loses +1;}
